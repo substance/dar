@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<grammar
+  xmlns="http://relaxng.org/ns/structure/1.0"
+  xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+  datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
+>
+  <start>
+    <ref name="manifest"/>
+  </start>
+
+  <define name="manifest">
+    <element name="manifest">
+      <zeroOrMore>
+        <ref name="manifest:document"/>
+      </zeroOrMore>
+    </element>
+  </define>
+
+  <define name="manifest:document">
+    <element name="document">
+      <attribute name="id" />
+      <attribute name="type" />
+      <attribute name="path" />
+    </element>
+  </define>
+
+</grammar>
