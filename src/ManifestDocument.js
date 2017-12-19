@@ -7,7 +7,7 @@ export default class ManifestDocument extends XMLDocument {
       let ids = Object.keys(nodes)
       for (var i = 0; i < ids.length; i++) {
         let node = nodes[ids[i]]
-        if (node.type === 'manifest') {
+        if (node.type === 'container') {
           this.root = node
         }
       }

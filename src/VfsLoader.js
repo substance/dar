@@ -32,7 +32,7 @@ export default class VfsLoader {
       }
       let sessions = {}
       sessions['manifest'] = manifestEditorSession
-      manifest.findAll('document').forEach((el) => {
+      manifest.findAll('container > documents > document').forEach((el) => {
         let session
         session = this._loadDocument(rdcUri, el)
         sessions[el.id] = session

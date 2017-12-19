@@ -5,18 +5,24 @@
   datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
 >
   <start>
-    <ref name="manifest"/>
+    <ref name="container"/>
   </start>
 
-  <define name="manifest">
-    <element name="manifest">
+  <define name="container">
+    <element name="container">
+      <ref name="documents"/>
+    </element>
+  </define>
+
+  <define name="documents">
+    <element name="documents">
       <zeroOrMore>
-        <ref name="manifest:document"/>
+        <ref name="document"/>
       </zeroOrMore>
     </element>
   </define>
 
-  <define name="manifest:document">
+  <define name="document">
     <element name="document">
       <attribute name="id" />
       <attribute name="type" />

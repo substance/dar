@@ -9,14 +9,20 @@ export default class DocumentContainer {
     return this.sessions.manifest.getDocument()
   }
 
-  getDocumentIds() {
-    const manifest = getManifest()
-    let docs = manifest.findAll('document')
-    return docs.map(d => d.id).filter(Boolean)
+  getDocumentEntries() {
+    const manifest = this.getManifest()
+    let docs = manifest.findAll('container > documents > document')
+    return docs.map(d => {
+      return {
+        id: d.id,
+        type: d.attr('type'),
+        path: d.attr('path'),
+        name: d.attr('name')
+      }
+    })
   }
 
-  getSessionForId(docId) {
+  getEditorSession(docId) {
     return this.sessions[docId]
   }
-
 }
