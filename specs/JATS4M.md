@@ -157,7 +157,6 @@ Example:
 ```
 
 
-
 ## Figures
 
 Spec for `<fig>`:
@@ -175,45 +174,6 @@ object-id[pub-id-type=doi]?, caption?, graphic
   </caption>
   <graphic xlink:href="images/fig1"/>
 </fig>
-```
-
-
-## Reproducible Figure
-
-*NOTE: This is considered an extension to JATS for reproducible elements. It is not supported by Texture natively.*
-
-Spec for `fig[fig-type=repro-fig]`:
-
-```
-object-id[pub-id-type=doi]?, caption?, alternatives
-```
-
-Example for `fig[fig-type=repro-fig]`
-
-```xml
-<fig id="f1" fig-type="repro-fig">
-  <caption>
-    <title>Biodiversity on Mars</title>
-    <p>Lorem ipsum</p>
-  </caption>
-  <alternatives>
-    <code specific-use="source" language="mini"><![CDATA[plot([11,98])]]></code>
-    <code specific-use="output" language="json"><![CDATA[{"execution_time": 1, "value_type": "plot-ly", "value": {} }]]></code>
-  </alternatives>
-</fig>
-```
-
-
-Spec for `fig > alternatives`:
-
-```
-code[specific-use=source], code[specific-use=output]
-```
-
-Spec for `fig > alternatives > code`:
-
-```
-#PCDATA
 ```
 
 
@@ -236,4 +196,85 @@ Example for `<media>`:
     </p>
   </caption>
 </media>
+```
+
+
+## Cells
+
+*NOTE: This is considered an extension to JATS for reproducible elements. It requires a compatible execution engine to be attached.*
+
+Spec for `code[specific-use=cell]`:
+
+```
+named-content
+```
+
+Spec for `code[specific-use=cell] > named-content`:
+
+```
+alternatives
+```
+
+Spec for `code[specific-use=cell] > named-content > alternatives`:
+
+```
+code[specific-use=source], code[specific-use=output]
+```
+
+Spec for `code[specific-use=cell] > named-content > alternatives > code`:
+
+```
+#PCDATA
+```
+
+Example for `code[specific-use=cell]`:
+
+```xml
+<code specific-use="cell">
+  <named-content>
+    <alternatives>
+      <code specific-use="source" language="javascript"><![CDATA[x = 5*5]]></code>
+      <code specific-use="output" language="json"><![CDATA[{ "value_type": "number", "value": 25}]]></code>
+    </alternatives>
+  </named-content>
+</code>
+```
+
+
+## Reproducible Figures
+
+*NOTE: This is considered an extension to JATS for reproducible elements. It requires a compatible execution engine to be attached.*
+
+Spec for `fig[fig-type=repro-fig]`:
+
+```
+object-id[pub-id-type=doi]?, caption?, alternatives
+```
+
+Example for `fig[fig-type=repro-fig]`
+
+```xml
+<fig id="f1" fig-type="repro-fig">
+  <caption>
+    <title>Biodiversity on Mars</title>
+    <p>Lorem ipsum</p>
+  </caption>
+  <alternatives>
+    <code specific-use="source" language="mini"><![CDATA[plot([11,98])]]></code>
+    <code specific-use="output" language="json"><![CDATA[{"execution_time": 1, "value_type": "plot-ly", "value": {...} }]]></code>
+  </alternatives>
+</fig>
+```
+
+
+Spec for `fig > alternatives`:
+
+```
+code[specific-use=source], code[specific-use=output]
+```
+
+Spec for `fig > alternatives > code`:
+
+```
+#PCDATA
 ```
