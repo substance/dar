@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sheet PUBLIC "SheetML 1.0" "SheetML.dtd">
+<sheet>
+  <meta>
+    <title>Data sheet</title>
+    <columns><col name="x1" type="number"/><col name="x2" type="number"/></columns>
+  </meta>
+  <data>
+    <row><col>2</col><col>4</col><col value="6">=sum(A1:B1)</col></row>
+    <row><col>3</col><col>6</col><col value="9">=sum(A2:B2)</col></row>
+  </data>
+</sheet>

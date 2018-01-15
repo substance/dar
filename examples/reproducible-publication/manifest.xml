@@ -1,0 +1,8 @@
+<archive>
+  <documents>
+    <document id="doc-1" type="article" path="manuscript.xml" />
+    <document id="sheet-1" type="sheet" path="data.xml" />
+  </documents>
+  <assets>
+  </assets>
+</archive>
