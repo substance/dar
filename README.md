@@ -1,9 +1,9 @@
 # Dar
 
-Dar stands for Document Archive and specifies a file format that holds multiple digital documents, complete with images and other assets. A Dar consists of a manifest file (`manifest.xml`) that describes the contents.
+Dar stands for Document Archive and specifies a virtual file format that holds multiple digital documents, complete with images and other assets. A Dar consists of a manifest file (`manifest.xml`) that describes the contents.
 
 ```xml
-<archive>
+<archive type="reproducible-research">
   <documents>
     <document id="doc-1" type="article" path="manuscript.xml" />
     <document id="doc-2" type="article" path="methods.xml" />
@@ -12,6 +12,9 @@ Dar stands for Document Archive and specifies a file format that holds multiple 
   <assets>
     <asset id="asset-1" path="static-figure-1.png"/>
   </assets>
+  <meta>
+    <value name="runtime">lifescience-v34</value>
+  </meta>
 </archive>
 ```
 
@@ -20,24 +23,25 @@ There are two types of contents:
 - Documents:  Those are meant to be manipulated by a visual editor, and typically stored as XML or JSON.
 - Assets: Regular files which can be used from any document. For instance, two documents could embed the same image.
 
-## Designed for scientific publishing
+## Designed for research and scientific publishing
 
-Dar has been designed for storing [reproducible research articles](https://elifesciences.org/labs/7dbeb390/reproducible-document-stack-supporting-the-next-generation-research-article), but can be used for any other purpose as well.
+Dar is being designed for storing [reproducible research publications](https://elifesciences.org/labs/7dbeb390/reproducible-document-stack-supporting-the-next-generation-research-article), but is suitable for any kind of digital documents.
 
 ## Goals
 
 - Establish standardised research publications
 - Self-contained archive (includes manuscript, images, source code and data)
 - Stand-alone, offline execution
-- long-term preservation
-- machine-friendly format to ease development of tools
+- Long-term preservation
+- Language and tool-agnostic (e.g. run Python and/or R, open with Jupyter or Stencila)
+- Machine-friendly format to ease development of tools
 
 ## Specifications
 
 The following specifications define a markup language (XML) for research articles and spreadsheets:
 
 - [JATS4M](specs/JATS4M.md): An XML format, based on JATS, the de facto standard for archiving and interchange of scientific open-access contents with XML
-- [SheetML](specs/SheetML): A simple XML format to describe sheets (think MS Excel or Google sheets) but designed for reproducible scientific computations
+- [SheetML](specs/SheetML.md): A simple XML format to describe sheets (think MS Excel or Google sheets) but designed for reproducible scientific computations
 
 ## Editors
 
