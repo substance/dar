@@ -162,12 +162,15 @@ Example:
 Spec for `<fig>`:
 
 ```
-object-id[pub-id-type=doi]?, caption?, graphic
+object-id[pub-id-type=doi]?, label?, caption?, graphic
 ```
+
+*NOTE: In Texture `<label>` is auto-generated and custom labels will be overriden.*
 
 ```xml
 <fig id="fig1">
   <object-id pub-id-type="doi">...</object-id>
+  <label>1</label>
   <caption>
     <title>This is the figure that shows everything</title>
     <p>Lorem ipsum</p>
@@ -182,8 +185,11 @@ object-id[pub-id-type=doi]?, caption?, graphic
 Spec for `<media>`:
 
 ```
-object-id[pub-id-type=doi]?, caption?
+object-id[pub-id-type=doi]?, label?, caption?
 ```
+
+*NOTE: In Texture `<label>` is auto-generated and custom labels will be overriden.*
+
 
 Example for `<media>`:
 
