@@ -170,13 +170,35 @@ object-id[pub-id-type=doi]?, label?, caption?, graphic
 ```xml
 <fig id="fig1">
   <object-id pub-id-type="doi">...</object-id>
-  <label>1</label>
+  <label>Figure 1</label>
   <caption>
     <title>This is the figure that shows everything</title>
     <p>Lorem ipsum</p>
   </caption>
   <graphic xlink:href="images/fig1"/>
 </fig>
+```
+
+## Tables
+
+Spec for `<table-wrap>`:
+
+```
+object-id[pub-id-type=doi]?, label?, caption?, table
+```
+
+*NOTE: In Texture `<label>` is auto-generated and custom labels will be overriden.*
+
+```xml
+<table-wrap id="tbl2" position="float">
+  <object-id pub-id-type="doi">10.7554/eLife.10565.006</object-id>
+  <label>Table 2.</label>
+  <caption>
+    <title>Table title</title>
+    <p>Sequence identity matrix of the piggyBac inverted terminal repeat sequences and consensus sequences of the MER75 and MER85 human piggyBac-like elements</p>
+  </caption>
+  <table>...</table>
+</table-wrap>
 ```
 
 
