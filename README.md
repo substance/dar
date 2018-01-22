@@ -13,7 +13,7 @@ Dar stands for (Reproducible) Document Archive and specifies a virtual file form
     <asset id="asset-1" path="static-figure-1.png"/>
   </assets>
   <meta>
-    <value name="runtime">lifescience-v34</value>
+    <value name="runtime">lifescience@34.2</value>
   </meta>
 </archive>
 ```
