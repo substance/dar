@@ -5,18 +5,16 @@
 Dar stands for (Reproducible) Document Archive and specifies a virtual file format that holds multiple digital documents, complete with images and other assets. A Dar consists of a manifest file (`manifest.xml`) that describes the contents.
 
 ```xml
-<archive type="reproducible-research">
+<archive type="rda">
   <documents>
-    <document id="doc-1" type="article" path="manuscript.xml" />
-    <document id="doc-2" type="article" path="methods.xml" />
-    <document id="sheet-1" type="sheet" path="data.xml" />
+    <document id="manuscript" name="Reproducible Document Stack" type="article" path="manuscript.xml" />
+    <document id="sheet" name="Sheet 1" type="sheet" path="sheet.xml" />
+    <document id="pub-meta" type="pub-meta" path="pub-meta.json" />
   </documents>
   <assets>
-    <asset id="asset-1" path="static-figure-1.png"/>
+    <asset id="234o23489237498234798" mime-type="image/png" name="Picture 1" path="234o23489237498234798.png"/>
   </assets>
-  <meta>
-    <value name="runtime">lifescience@34.2</value>
-  </meta>
+  <runtime>particle-physics@1.0</runtime>
 </archive>
 ```
 
