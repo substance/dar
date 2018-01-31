@@ -55,34 +55,35 @@ surname?, given-names?, prefix?, suffix?
 ```
 
 
-## Authors
+## Authors & Editors
 
-Spec for `<contrib-group>`:
+### `<contrib-group>`
 
 ```
 (contrib[contrib-type=person|group])*
 ```
 
-Spec for `<contrib contrib-type="person">`:
+### `<contrib contrib-type="person">`
 
 ```
-name, xref*
+contrib-id[contrib-id-type=orcid]?, contrib-id[contrib-id-type=entity]?, name, xref*
 ```
 
-Spec for `<contrib contrib-type="group">`:
+### `<contrib contrib-type="group">`
 
 ```
 collab
 ```
 
-Spec for `<collab>`:
+### `<collab>`
 
 ```
 named-content, uri?, contrib-group?
 ```
 
-Example for `<contrib-group>`:
+*NOTE: Group authors `<collab>` are not yet supported in Texture.*
 
+Example for authors / group authors:
 
 ```xml
 <contrib-group content-type="author">
@@ -92,6 +93,7 @@ Example for `<contrib-group>`:
     </name>
     <xref ref-type="aff" rid="aff1"/>
   </contrib>
+  <!-- NOTE: Group authors are not yet supported by Texture! -->
   <contrib contrib-type="group" equal-contrib="yes">
     <collab>
       <named-content content-type="name">The Mouse Genome Sequencing Consortium</named-content>
@@ -115,9 +117,7 @@ Example for `<contrib-group>`:
 ```
 
 
-## Editors
-
-Example:
+Example for editors:
 
 ```xml
 <contrib-group content-type="editor">
@@ -133,7 +133,7 @@ Example:
 
 ## Affiliations
 
-Spec for `<aff>`:
+### `<aff>`
 
 ```
 institution[content-type=orgname],
@@ -159,7 +159,7 @@ Example:
 
 ## Figures
 
-Spec for `<fig>`:
+### `<fig>`
 
 ```
 object-id[pub-id-type=doi]?, label?, caption?, graphic
@@ -181,7 +181,7 @@ object-id[pub-id-type=doi]?, label?, caption?, graphic
 
 ## Tables
 
-Spec for `<table-wrap>`:
+### `<table-wrap>`
 
 ```
 object-id[pub-id-type=doi]?, label?, caption?, table
@@ -204,7 +204,7 @@ object-id[pub-id-type=doi]?, label?, caption?, table
 
 ## Media
 
-Spec for `<media>`:
+### `<media>`
 
 ```
 object-id[pub-id-type=doi]?, label?, caption?
@@ -225,6 +225,42 @@ Example for `<media>`:
   </caption>
 </media>
 ```
+
+## List
+
+*NOTE: Not implemented in Texture yet.*
+
+### `<list>`
+
+```
+list-item
+```
+
+### `<list-item>`
+
+```
+(list | p)?
+```
+
+*NOTE: We allow only one list or paragraph as a child*
+
+Example for bullet list:
+
+```xml
+<list list-type="bullet">
+  <list-item>
+    <p>item 1</p>
+  </list-item>
+  <list-item>
+    <list list-type="bullet">
+      <list-item>
+        <p>item 1.1</p>
+      </list-item>
+    </list>
+  </list-item>
+</list>
+```
+
 
 
 ## Cells
