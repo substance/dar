@@ -2,7 +2,7 @@
 
 This specification defines strict tagging rules for JATS, with the goal of optimising for machine readability, avoiding redundancy and ensuring reusability. The premise is to have exactly one tagging style per use-case. E.g. there is only one way to tag a reference, author or affiliation. Additionally we define a set of optional extension to model reproducible elements (cells) in JATS.
 
-[`<aff>`](#aff) [`<caption>`](#caption) [`<contrib-group>`](#contrib-group) [`<contrib>`](#contrib-contrib-typeperson) [`<disp-quote>`](#disp-quote) [`<fig>`](#fig) [`<fig[fig-type=repro-fig]>`](#fig-fig-typerepro-fig) [`<fn-group>`](#fn-group) [`<fn>`](#fn) [`<list>`](#list) [`<media>`](#media) [`<name>`](#name) [`<ref>`](#ref) [`sec`](#sec) [`table-wrap`](#table-wrap)
+[`<aff>`](#aff) [`<article-meta>`](#article-meta) [`<caption>`](#caption) [`<contrib-group>`](#contrib-group) [`<contrib>`](#contrib-contrib-typeperson) [`<disp-quote>`](#disp-quote) [`<fig>`](#fig) [`<fig[fig-type=repro-fig]>`](#figfig-typerepro-fig) [`<fn-group>`](#fn-group) [`<fn>`](#fn) [`<list>`](#list) [`<media>`](#media) [`<name>`](#name) [`<ref>`](#ref) [`sec`](#sec) [`table-wrap`](#table-wrap)
 
 ## Core Elements
 
@@ -28,6 +28,56 @@ Example:
   <uri content-type="entity">organisation-1</uri>
 </aff>
 ```
+
+### `<article-meta>`
+
+Please note, that so far only `title-group`, `contrib-group`, and `abstract` are fully specified and editable in Texture.
+
+```
+article-id?, article-categories?, title-group?, contrib-group[content-type=author],
+contrib-group[content-type=editor], author-notes?, pub-date*, volume?, issue?,
+isbn, (((fpage, lpage?)?, page-range?) | elocation-id)?, history?, permissions?,
+self-uri*, (related-article | related-object)*, abstract?, trans-abstract*,
+kwd-group*, funding-group*, conference*, counts?, custom-meta-group?
+```
+
+Example shows all editable elements:
+
+```xml
+<article-meta>
+  <title-group>
+    <article-title>Object vision to hand action in macaque parietal, premotor, and motor cortices</article-title>
+  </title-group>
+  <contrib-group content-type="author">
+    ...
+  </contrib-group>
+  <contrib-group content-type="editor">
+    ...
+  </contrib-group>
+  <aff id="aff1">
+    ...
+  </aff>
+  <aff id="aff2">
+    ...
+  </aff>
+  <pub-date publication-format="print" date-type="pub" iso-8601-date="1999-01-29">
+    <day>29</day>
+    <month>01</month>
+    <year>1999</year>
+  </pub-date>
+  <volume>318</volume>
+  <issue>7187</issue>
+  <fpage>837</fpage>
+  <lpage>841</lpage>
+  <history>
+    ...
+  </history>
+  <abstract>
+    <p>Abstract</p>
+  </abstract>
+</article-meta>
+```
+
 
 ### `<caption>`
 
@@ -111,7 +161,7 @@ collab
 ### `<disp-quote>`
 
 ```
-p+ attrib?
+p+, attrib?
 ```
 
 ```xml
@@ -160,6 +210,8 @@ Example:
 ### `<fn>`
 
 ```
+@id
+
 p*
 ```
 
