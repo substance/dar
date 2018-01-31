@@ -1,87 +1,53 @@
 # JATS4M - JATS for Machines
 
-This specification defines a strict tagging style for JATS, with the goal of optimising for machine readability, avoiding redundancy and ensuring reusability. The premise is to have exactly one tagging style per use-case. E.g. there is only one way to tag a reference, author or affiliation. Additionally we define a set of optional extension to model reproducible elements (cells) in JATS.
+This specification defines strict tagging rules for JATS, with the goal of optimising for machine readability, avoiding redundancy and ensuring reusability. The premise is to have exactly one tagging style per use-case. E.g. there is only one way to tag a reference, author or affiliation. Additionally we define a set of optional extension to model reproducible elements (cells) in JATS.
 
-## References
+[`<aff>`](#aff) [`<caption>`](#caption) [`<contrib-group>`](#contrib-group) [`<contrib>`](#contrib-contrib-typeperson) [`<disp-quote>`](#disp-quote) [`<fig>`](#fig) [`<fig[fig-type=repro-fig]>`](#fig-fig-typerepro-fig) [`<fn-group>`](#fn-group) [`<fn>`](#fn) [`<list>`](#list) [`<media>`](#media) [`<name>`](#name) [`<ref>`](#ref) [`sec`](#sec) [`table-wrap`](#table-wrap)
 
-All references are expressed as structured `<element-citation>` records. Unlike JATS we define a strict pattern for each `publication-type` value.
+## Core Elements
 
-Spec for `<element-citation>`:
+### `<aff>`
 
-publication-type|pattern
----|---
-book|person-group[person-group-type=author]?, person-group[person-group-type=editor]?, edition?, year?, month?, day?, chapter-title?, source?, publisher-loc?, publisher-name?, fpage?, lpage?, page-range?, page-count?, elocation-id?, pub-id[pub-id-type='doi, pmid, isbn, entity']?
-preprint|person-group[person-group-type='author'], article-title, source, year, month?, day?, pub-id[pub-id-type='doi, entity']?
-clinicaltrial|person-group[person-group-type=sponsor]?, year?, month?, day?, article-title?, source?,pub-id[pub-id-type='doi, entity']?
-confproc|person-group[person-group-type='author']?, article-title?, year?, month?, day?, conf-name?, source?, fpage?, lpage?, page-range?, elocation-id?, pub-id[pub-id-type='doi,entity']?
-data|person-group[person-group-type='author']?, data-title?, source?, year?, month?, day?, pub-id[pub-id-type="accession, ark, doi, archive, entity"]?
-periodical|person-group[person-group-type=author]?, article-title?, year?, month?, day?, source?, fpage?, lpage?, page-range?, volume?, pub-id[pub-id-type='doi, entity']?
-journal|person-group[person-group-type=author]?, person-group[person-group-type=editor]?, year, month?, day?, article-title, source?, volume?, issue?, fpage?, lpage?, page-range?, elocation-id?, comment?, pub-id[pub-id-type='doi, pmid, entity']?
-patent|person-group[person-group-type='inventor'], collab[type=assignee]?, article-title?, year?, month?, day?, source?, patent[country='xxx']?
-report|person-group[person-group-type='author']?, source?, year?, month?, day?, publisher-name?, publisher-loc?, pub-id[pub-id-type='isbn, entity']?
-software|person-group[person-group-type='author']?, year?, month?, day?, source?, version?, publisher-loc?, publisher-name?, pub-id[pub-id-type='doi, entity']?
-thesis|person-group[person-group-type='author']?, year?, month?, day?, article-title?, publisher-name?, publisher-loc?, pub-id[pub-id-type='doi, entity']?
-webpage|person-group[person-group-type='author']?, article-title?, uri?, year?, month?, day?, publisher-loc?, source?
+```
+institution[content-type=orgname],
+institution[content-type=orgdiv1]?, institution[content-type=orgdiv2]?,
+institution[content-type=orgdiv3]?, addr-line[content-type=street-address]?,
+addr-line[content-type=complements]?,
+city?, state?, postal-code?, country?,
+phone?, fax?, email?, uri[content-type=link]?
+```
 
-Example for `<ref>`:
+Example:
 
 ```xml
-<ref id="r1">
-  <element-citation publication-type="book">
-    <person-group person-group-type="author">
-      <collab>National Research Council</collab>
-    </person-group>
-    <year iso-8601-date="2003">2003</year>
-    <source>Guidelines for the Care and Use of Mammals in Neuroscience and Behavioral Research</source>
-    <publisher-loc>Washington, D.C</publisher-loc>
-    <publisher-name>National Academies Press</publisher-name>
-    <pub-id pub-id-type="doi">10.17226/10732</pub-id>
-    <!-- Internal: links an element-citation with a record in the database -->
-    <pub-id pub-id-type="entity">book-1</pub-id>
-  </element-citation>
-</ref>
+<aff id="aff1">
+  <institution content-type="orgname">German Primate Center GmbH</institution>
+  <institution content-type="orgdiv1">Neurobiology Laboratory</institution>
+  <city>Göttingen</city>
+  <country>Germany</country>
+  <uri content-type="entity">organisation-1</uri>
+</aff>
 ```
 
-### `<person-group>`
+### `<caption>`
 
 ```
-(collab, name)*
+title?, p*
 ```
 
-### `<name>`
+### `<collab>`
 
 ```
-surname?, given-names?, prefix?, suffix?
+named-content[content-type=name], uri?, contrib-group?
 ```
 
-
-## Authors & Editors
+*NOTE: Group authors `<collab>` are not yet supported in Texture.*
 
 ### `<contrib-group>`
 
 ```
 (contrib[contrib-type=person|group])*
 ```
-
-### `<contrib contrib-type="person">`
-
-```
-contrib-id[contrib-id-type=orcid]?, contrib-id[contrib-id-type=entity]?, name, xref*
-```
-
-### `<contrib contrib-type="group">`
-
-```
-collab
-```
-
-### `<collab>`
-
-```
-named-content, uri?, contrib-group?
-```
-
-*NOTE: Group authors `<collab>` are not yet supported in Texture.*
 
 Example for authors / group authors:
 
@@ -116,7 +82,6 @@ Example for authors / group authors:
 </contrib-group>
 ```
 
-
 Example for editors:
 
 ```xml
@@ -131,33 +96,30 @@ Example for editors:
 </contrib-group>
 ```
 
-## Affiliations
-
-### `<aff>`
+### `<contrib contrib-type="person">`
 
 ```
-institution[content-type=orgname],
-institution[content-type=orgdiv1]?, institution[content-type=orgdiv2]?,
-institution[content-type=orgdiv3]?, addr-line[content-type=street-address]?,
-addr-line[content-type=complements]?,
-city?, state?, postal-code?, country?,
-phone?, fax?, email?, uri[content-type=link]?
+contrib-id[contrib-id-type=orcid]?, contrib-id[contrib-id-type=entity]?, name, xref*
 ```
 
-Example:
+### `<contrib contrib-type="group">`
+
+```
+collab
+```
+
+### `<disp-quote>`
+
+```
+p+ attrib?
+```
 
 ```xml
-<aff id="aff1">
-  <institution content-type="orgname">German Primate Center GmbH</institution>
-  <institution content-type="orgdiv1">Neurobiology Laboratory</institution>
-  <city>Göttingen</city>
-  <country>Germany</country>
-  <uri content-type="entity">organisation-1</uri>
-</aff>
+<disp-quote>
+  <p>Curabitur vehicula mattis sodales. Orci varius natoque penatibus.</p>
+  <attrib>John Doe</attrib>
+</disp-quote>
 ```
-
-
-## Figures
 
 ### `<fig>`
 
@@ -179,7 +141,141 @@ object-id[pub-id-type=doi]?, label?, caption?, graphic
 </fig>
 ```
 
-## Tables
+### `<fn-group>`
+
+```
+fn*
+```
+
+Example:
+
+```xml
+<fn-group>
+  <fn id="fn1">
+    <p>Lorem ipsum dolor sit amet, ea ludus intellegat.</p>
+  </fn>
+</fn-group>
+```
+
+### `<fn>`
+
+```
+p*
+```
+
+### `<list>`
+
+*NOTE: Not implemented in Texture yet.*
+
+```
+list-item
+```
+
+Example for bullet list:
+
+```xml
+<list list-type="bullet">
+  <list-item>
+    <p>item 1</p>
+  </list-item>
+  <list-item>
+    <list list-type="bullet">
+      <list-item>
+        <p>item 1.1</p>
+      </list-item>
+    </list>
+  </list-item>
+</list>
+```
+
+### `<list-item>`
+
+```
+(list | p)?
+```
+
+*NOTE: We allow only one list or paragraph as a child.*
+
+### `<media>`
+
+```
+object-id[pub-id-type=doi]?, label?, caption?
+```
+
+*NOTE: In Texture `<label>` is auto-generated and custom labels will be overriden.*
+
+Example:
+
+```xml
+<media id="media1" mime-subtype="mp4" mimetype="video" xlink:href="elife-15278-media1.mp4">
+  <object-id pub-id-type="doi">10.7554/eLife.15278.004</object-id>
+  <caption>
+    <title>Experimental task.</title>
+    <p>A monkey grasped and held highly variable objects presented on a PC-controlled turntable. Note: For presentation purposes, the video was captured in the light.
+    </p>
+  </caption>
+</media>
+```
+
+### `<name>`
+
+```
+surname?, given-names?, prefix?, suffix?
+```
+
+### `<person-group>`
+
+```
+(collab, name)*
+```
+
+### `<ref>`
+
+All references are expressed as structured `<element-citation>` records. Unlike JATS we define a strict pattern for each `publication-type` value.
+
+Spec for `<element-citation>`:
+
+publication-type|pattern
+---|---
+book|person-group[person-group-type=author]?, person-group[person-group-type=editor]?, edition?, year?, month?, day?, chapter-title?, source?, publisher-loc?, publisher-name?, fpage?, lpage?, page-range?, page-count?, elocation-id?, pub-id[pub-id-type='doi, pmid, isbn, entity']?
+preprint|person-group[person-group-type='author'], article-title, source, year, month?, day?, pub-id[pub-id-type='doi, entity']?
+clinicaltrial|person-group[person-group-type=sponsor]?, year?, month?, day?, article-title?, source?,pub-id[pub-id-type='doi, entity']?
+confproc|person-group[person-group-type='author']?, article-title?, year?, month?, day?, conf-name?, source?, fpage?, lpage?, page-range?, elocation-id?, pub-id[pub-id-type='doi,entity']?
+data|person-group[person-group-type='author']?, data-title?, source?, year?, month?, day?, pub-id[pub-id-type="accession, ark, doi, archive, entity"]?
+periodical|person-group[person-group-type=author]?, article-title?, year?, month?, day?, source?, fpage?, lpage?, page-range?, volume?, pub-id[pub-id-type='doi, entity']?
+journal|person-group[person-group-type=author]?, person-group[person-group-type=editor]?, year, month?, day?, article-title, source?, volume?, issue?, fpage?, lpage?, page-range?, elocation-id?, comment?, pub-id[pub-id-type='doi, pmid, entity']?
+patent|person-group[person-group-type='inventor'], collab[type=assignee]?, article-title?, year?, month?, day?, source?, patent[country='xxx']?
+report|person-group[person-group-type='author']?, source?, year?, month?, day?, publisher-name?, publisher-loc?, pub-id[pub-id-type='isbn, entity']?
+software|person-group[person-group-type='author']?, year?, month?, day?, source?, version?, publisher-loc?, publisher-name?, pub-id[pub-id-type='doi, entity']?
+thesis|person-group[person-group-type='author']?, year?, month?, day?, article-title?, publisher-name?, publisher-loc?, pub-id[pub-id-type='doi, entity']?
+webpage|person-group[person-group-type='author']?, article-title?, uri?, year?, month?, day?, publisher-loc?, source?
+
+Example:
+
+```xml
+<ref id="r1">
+  <element-citation publication-type="book">
+    <person-group person-group-type="author">
+      <collab>National Research Council</collab>
+    </person-group>
+    <year iso-8601-date="2003">2003</year>
+    <source>Guidelines for the Care and Use of Mammals in Neuroscience and Behavioral Research</source>
+    <publisher-loc>Washington, D.C</publisher-loc>
+    <publisher-name>National Academies Press</publisher-name>
+    <pub-id pub-id-type="doi">10.17226/10732</pub-id>
+    <!-- Internal: links an element-citation with a record in the database -->
+    <pub-id pub-id-type="entity">book-1</pub-id>
+  </element-citation>
+</ref>
+```
+
+### `<sec>`
+
+We are much stricter as the original JATS, and only allow supported block-level elements.
+
+```
+title?, (fig | media | table-wrap | list | p | disp-quote | sec)*
+```
 
 ### `<table-wrap>`
 
@@ -201,97 +297,17 @@ object-id[pub-id-type=doi]?, label?, caption?, table
 </table-wrap>
 ```
 
+## Reproducible Elements
 
-## Media
+*NOTE: These are considered an extension to JATS. It requires a compatible execution engine to be attached. You can open those documents with Stencila.*
 
-### `<media>`
-
-```
-object-id[pub-id-type=doi]?, label?, caption?
-```
-
-*NOTE: In Texture `<label>` is auto-generated and custom labels will be overriden.*
-
-
-Example for `<media>`:
-
-```xml
-<media id="media1" mime-subtype="mp4" mimetype="video" xlink:href="elife-15278-media1.mp4">
-  <object-id pub-id-type="doi">10.7554/eLife.15278.004</object-id>
-  <caption>
-    <title>Experimental task.</title>
-    <p>A monkey grasped and held highly variable objects presented on a PC-controlled turntable. Note: For presentation purposes, the video was captured in the light.
-    </p>
-  </caption>
-</media>
-```
-
-## List
-
-*NOTE: Not implemented in Texture yet.*
-
-### `<list>`
-
-```
-list-item
-```
-
-### `<list-item>`
-
-```
-(list | p)?
-```
-
-*NOTE: We allow only one list or paragraph as a child*
-
-Example for bullet list:
-
-```xml
-<list list-type="bullet">
-  <list-item>
-    <p>item 1</p>
-  </list-item>
-  <list-item>
-    <list list-type="bullet">
-      <list-item>
-        <p>item 1.1</p>
-      </list-item>
-    </list>
-  </list-item>
-</list>
-```
-
-
-
-## Cells
-
-*NOTE: This is considered an extension to JATS for reproducible elements. It requires a compatible execution engine to be attached.*
-
-Spec for `code[specific-use=cell]`:
+### `code[specific-use=cell]`
 
 ```
 named-content
 ```
 
-Spec for `code[specific-use=cell] > named-content`:
-
-```
-alternatives
-```
-
-Spec for `code[specific-use=cell] > named-content > alternatives`:
-
-```
-code[specific-use=source], code[specific-use=output]
-```
-
-Spec for `code[specific-use=cell] > named-content > alternatives > code`:
-
-```
-#PCDATA
-```
-
-Example for `code[specific-use=cell]`:
+Example:
 
 ```xml
 <code specific-use="cell">
@@ -304,18 +320,31 @@ Example for `code[specific-use=cell]`:
 </code>
 ```
 
+### `code[specific-use=cell] > named-content`:
 
-## Reproducible Figures
+```
+alternatives
+```
 
-*NOTE: This is considered an extension to JATS for reproducible elements. It requires a compatible execution engine to be attached.*
+### `code[specific-use=cell] > named-content > alternatives`
 
-Spec for `fig[fig-type=repro-fig]`:
+```
+code[specific-use=source], code[specific-use=output]
+```
+
+### `code[specific-use=cell] > named-content > alternatives > code`
+
+```
+#PCDATA
+```
+
+### `fig[fig-type=repro-fig]`
 
 ```
 object-id[pub-id-type=doi]?, caption?, alternatives
 ```
 
-Example for `fig[fig-type=repro-fig]`
+Example:
 
 ```xml
 <fig id="f1" fig-type="repro-fig">
@@ -330,14 +359,13 @@ Example for `fig[fig-type=repro-fig]`
 </fig>
 ```
 
-
-Spec for `fig > alternatives`:
+### `fig[fig-type=repro-fig] > alternatives`
 
 ```
 code[specific-use=source], code[specific-use=output]
 ```
 
-Spec for `fig > alternatives > code`:
+### `fig[fig-type=repro-fig] > alternatives > code`
 
 ```
 #PCDATA
