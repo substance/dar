@@ -20,7 +20,7 @@ Dar stands for (Reproducible) Document Archive and specifies a virtual file form
 
 There are two types of contents:
 
-- Documents:  Those are meant to be manipulated by a visual editor, and typically stored as XML or JSON.
+- Documents:  Those are meant to be manipulated by a visual editor, and typically stored as XML/HTML or JSON.
 - Assets: Regular files which can be used from any document. For instance, two documents could embed the same image.
 
 ## Designed for research and scientific publishing
