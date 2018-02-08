@@ -1,6 +1,6 @@
 # JATS4M - JATS for Machines
 
-This specification defines strict tagging rules for JATS, with the goal of optimising for machine readability, avoiding redundancy and ensuring reusability. The premise is to have exactly one tagging style per use-case. E.g. there is only one way to tag a reference, author or affiliation. Additionally we define a set of optional extensions to model reproducible elements (cells) in JATS.
+This specification defines strict tagging rules for [JATS](https://jats.nlm.nih.gov/archiving/tag-library/1.1/), with the goal of optimising for machine readability, avoiding redundancy and ensuring reusability. The premise is to have exactly one tagging style per use-case. E.g. there is only one way to tag a reference, author or affiliation. Additionally we define a set of optional extensions to model reproducible elements (cells) in JATS.
 
 [`<aff>`](#aff) [`<article-meta>`](#article-meta) [`<caption>`](#caption) [`<code[specific-use=cell]>`](#codespecific-usecell)  [`<contrib-group>`](#contrib-group) [`<contrib>`](#contrib-contrib-typeperson) [`<disp-quote>`](#disp-quote) [`<fig>`](#fig) [`<fig[fig-type=repro-fig]>`](#figfig-typerepro-fig) [`<fn-group>`](#fn-group) [`<fn>`](#fn) [`<list>`](#list) [`<media>`](#media) [`<name>`](#name) [`<ref>`](#ref) [`sec`](#sec) [`table-wrap`](#table-wrap)
 
