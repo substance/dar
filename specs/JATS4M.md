@@ -149,7 +149,7 @@ Example for editors:
 ### `<contrib contrib-type="person">`
 
 ```
-contrib-id[contrib-id-type=orcid]?, contrib-id[contrib-id-type=entity]?, name, xref*
+contrib-id[contrib-id-type=orcid]?, contrib-id[contrib-id-type=entity]?, name, email?, xref*
 ```
 
 ### `<contrib contrib-type="group">`
