@@ -1,7 +1,5 @@
 # Dar
 
-**(Work in progress)**
-
 Dar stands for (Reproducible) Document Archive and specifies a virtual file format that holds multiple digital documents, complete with images and other assets. A Dar consists of a manifest file (`manifest.xml`) that describes the contents.
 
 ```xml
