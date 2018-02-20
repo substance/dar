@@ -61,6 +61,13 @@ These two examples are continuously updated, to reflect the latest versions of t
 
 This is an early stage proposal (alpha) that will be continuously advanced. We are using existing standards when possible (such as JATS-XML) and seek for consensus in the research community to offer the most flexible and concise tagging guidelines.
 
+## License
+
+The JATS Standard is copyrighted by NISO, but all of the non-normative 
+information found in this repository is in the CC BY-NC 4.0.
+
+More info at http://creativecommons.org/licenses/by-nc/4.0/.
+
 ## Credits
 
 Dar is developed by the [Substance Consortium](http://substance.io/consortium/), an open community formed by the Public Knowledge Project (PKP), the Collaborative Knowledge Foundation (CoKo), SciELO, Érudit, eLife and Stencila.
