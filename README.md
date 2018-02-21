@@ -61,9 +61,9 @@ This is an early stage proposal (alpha) that will be continuously advanced. We a
 ## License
 
 The JATS Standard is copyrighted by NISO, but all of the non-normative 
-information found in this repository is in the CC BY-NC 4.0.
+information found in this repository is in the CC BY-SA 4.0.
 
-More info at http://creativecommons.org/licenses/by-nc/4.0/.
+More info at https://creativecommons.org/licenses/by-sa/4.0/
 
 ## Credits
 
