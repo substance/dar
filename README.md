@@ -7,7 +7,6 @@ Dar stands for (Reproducible) Document Archive and specifies a virtual file form
   <documents>
     <document id="manuscript" name="Reproducible Document Stack" type="article" path="manuscript.xml" />
     <document id="sheet" name="Sheet 1" type="sheet" path="sheet.xml" />
-    <document id="pub-meta" type="pub-meta" path="pub-meta.json" />
   </documents>
   <assets>
     <asset id="234o23489237498234798" mime-type="image/png" name="Picture 1" path="234o23489237498234798.png"/>
