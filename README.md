@@ -37,8 +37,8 @@ Dar is being designed for storing [reproducible research publications](https://e
 
 The following specifications define a markup language (XML) for research articles and spreadsheets:
 
-- [Dar Article](specs/DarArticle.md): An XML format, based on JATS, the de facto standard for archiving and interchange of scientific open-access contents with XML
-- [Dar Sheet](specs/DarSheet.md): A simple XML format to describe sheets (think MS Excel or Google sheets) but designed for reproducible scientific computations
+- [Dar Article](DarArticle.md): An XML format, based on JATS, the de facto standard for archiving and interchange of scientific open-access contents with XML
+- [Dar Sheet](DarSheet.md): A simple XML format to describe sheets (think MS Excel or Google sheets) but designed for reproducible scientific computations
 
 ## Editors
 
