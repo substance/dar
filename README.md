@@ -3,7 +3,7 @@
 Dar stands for (Reproducible) Document Archive and specifies a virtual file format that holds multiple digital documents, complete with images and other assets. A Dar consists of a manifest file (`manifest.xml`) that describes the contents.
 
 ```xml
-<archive type="rda">
+<dar>
   <documents>
     <document id="manuscript" name="Reproducible Document Stack" type="article" path="manuscript.xml" />
     <document id="sheet" name="Sheet 1" type="sheet" path="sheet.xml" />
@@ -12,7 +12,7 @@ Dar stands for (Reproducible) Document Archive and specifies a virtual file form
     <asset id="234o23489237498234798" mime-type="image/png" name="Picture 1" path="234o23489237498234798.png"/>
   </assets>
   <runtime>particle-physics@1.0</runtime>
-</archive>
+</dar>
 ```
 
 There are two types of contents:
@@ -22,16 +22,16 @@ There are two types of contents:
 
 ## Designed for research and scientific publishing
 
-Dar is being designed for storing [reproducible research publications](https://elifesciences.org/labs/7dbeb390/reproducible-document-stack-supporting-the-next-generation-research-article), but is suitable for any kind of digital documents.
+Dar is being designed for storing [reproducible research publications](https://elifesciences.org/labs/7dbeb390/reproducible-document-stack-supporting-the-next-generation-research-article), but the underlying concepts are suitable for any kind of digital documents that should be bundled together with their assets.
 
 ## Goals
 
 - Establish standardised research publications
 - Self-contained archive (includes manuscript, images, source code and data)
-- Stand-alone, offline execution
-- Long-term preservation
-- Language and tool-agnostic (e.g. run Python and/or R, open with Jupyter or Stencila)
 - Machine-friendly format to ease development of tools
+- Long-term preservation
+- Stand-alone, offline execution of reproducible elements
+- Language and tool-agnostic (e.g. run Python and/or R, open with Jupyter or Stencila)
 
 ## Specifications
 
@@ -56,7 +56,7 @@ These two examples are continuously updated, to reflect the latest versions of t
 
 ## Status
 
-This is an early stage proposal (alpha) that will be continuously advanced. We are using existing standards when possible (such as JATS-XML) and seek for consensus in the research community to offer the most flexible and concise tagging guidelines.
+This is an early stage proposal (alpha) that will be continuously advanced. We are using existing standards when possible (such as JATS-XML for representing articles) and seek for consensus in the research community to offer the most flexible and concise tagging guidelines.
 
 ## License
 
