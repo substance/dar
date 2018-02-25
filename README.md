@@ -31,7 +31,8 @@ Dar is being designed for storing [reproducible research publications](https://e
 - Machine-friendly format to ease development of tools
 - Long-term preservation
 - Stand-alone, offline execution of reproducible elements
-- Language and tool-agnostic (e.g. run Python and/or R, open with Jupyter or Stencila)
+- Language agnostic (e.g. run Python, R, Jupyter, Kernels etc.)
+- Tool agnostic (use Jupyter, RMarkdown or Stencila for authoring)
 
 ## Specifications
 
