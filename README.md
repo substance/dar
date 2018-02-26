@@ -40,7 +40,7 @@ The following specifications define a markup language (XML) for research article
 
 - [Dar Article](DarArticle.md): An XML format, based on JATS, the de facto standard for archiving and interchange of scientific open-access contents with XML
 - [Dar Sheet](DarSheet.md): A simple XML format to describe sheets (think MS Excel or Google sheets) but designed for reproducible scientific computations
-- [Dar Runtime](DarRuntime.md): An API for looking up and accessing runtimes, which support multiple languages using HTTP.
+- [Dar Runtime](DarRuntime.md): An HTTP API for looking up and accessing runtimes, which support multiple languages.
 
 ## Editors
 
