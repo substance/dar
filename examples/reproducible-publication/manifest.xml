@@ -1,8 +1,9 @@
-<archive type="reproducible-research">
+<dar>
   <documents>
-    <document id="doc-1" type="article" path="manuscript.xml" />
-    <document id="sheet-1" type="sheet" path="data.xml" />
+    <document id="doc1" name="Reproducible Document Stack" type="article" path="manuscript.xml" />
+    <document id="sheet1" name="Ice Cream Sales" type="sheet" path="ice-cream-sales.xml" />
   </documents>
   <assets>
+    <asset id="fig1" type="image/jpg" path="fig1.jpg"/>
   </assets>
-</archive>
+</dar>
