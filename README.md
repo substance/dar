@@ -22,7 +22,7 @@ There are two types of contents:
 
 ## Designed for research and scientific publishing
 
-Dar is being designed for storing [reproducible research publications](https://elifesciences.org/labs/7dbeb390/reproducible-document-stack-supporting-the-next-generation-research-article), but the underlying concepts are suitable for any kind of digital documents that should be bundled together with their assets.
+Dar is being designed for storing [reproducible research publications](https://elifesciences.org/labs/7dbeb390/reproducible-document-stack-supporting-the-next-generation-research-article), but the underlying concepts are suitable for any kind of digital publications that can be bundled together with their assets.
 
 ## Goals
 
