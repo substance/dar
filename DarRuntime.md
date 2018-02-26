@@ -123,7 +123,7 @@ Result:
 
 ```json
 {
-  "value": { "type": "integer", "data": 50 },
+  "value": { "type": "integer", "data": 13 },
   "errors": []
 }
 ```
