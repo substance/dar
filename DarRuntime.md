@@ -25,6 +25,7 @@ As a result a url to a runtime host is returned, which lets you access that runt
 
 ```json
 {
+  "id": "sci@0.2.0",
   "name": "sci",
   "version": "0.2.0",
   "hostUrl": "https://runtimehost"
