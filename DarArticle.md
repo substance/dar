@@ -289,7 +289,7 @@ Spec for `<element-citation>`:
 
 publication-type|pattern
 ---|---
-book|person-group[person-group-type=author]?, person-group[person-group-type=editor]?, edition?, year?, month?, day?, chapter-title?, source?, publisher-loc?, publisher-name?, fpage?, lpage?, page-range?, page-count?, elocation-id?, pub-id[pub-id-type='doi, pmid, isbn, entity']?
+book|person-group[person-group-type=author]?, person-group[person-group-type=editor]?, edition?, year?, month?, day?, chapter-title?, source?, publisher-loc*, publisher-name*, fpage?, lpage?, page-range?, page-count?, elocation-id?, pub-id[pub-id-type='doi, pmid, isbn, entity']?
 preprint|person-group[person-group-type='author'], article-title, source, year, month?, day?, pub-id[pub-id-type='doi, entity']?
 clinicaltrial|person-group[person-group-type=sponsor]?, year?, month?, day?, article-title?, source?,pub-id[pub-id-type='doi, entity']?
 confproc|person-group[person-group-type='author']?, article-title?, year?, month?, day?, conf-name?, source?, fpage?, lpage?, page-range?, elocation-id?, pub-id[pub-id-type='doi,entity']?
@@ -297,10 +297,10 @@ data|person-group[person-group-type='author']?, data-title?, source?, year?, mon
 periodical|person-group[person-group-type=author]?, article-title?, year?, month?, day?, source?, fpage?, lpage?, page-range?, volume?, pub-id[pub-id-type='doi, entity']?
 journal|person-group[person-group-type=author]?, person-group[person-group-type=editor]?, year, month?, day?, article-title, source?, volume?, issue?, fpage?, lpage?, page-range?, elocation-id?, comment?, pub-id[pub-id-type='doi, pmid, entity']?
 patent|person-group[person-group-type='inventor'], collab[type=assignee]?, article-title?, year?, month?, day?, source?, patent[country='xxx']?
-report|person-group[person-group-type='author']?, source?, year?, month?, day?, publisher-name?, publisher-loc?, pub-id[pub-id-type='isbn, entity']?
-software|person-group[person-group-type='author']?, year?, month?, day?, source?, version?, publisher-loc?, publisher-name?, pub-id[pub-id-type='doi, entity']?
-thesis|person-group[person-group-type='author']?, year?, month?, day?, article-title?, publisher-name?, publisher-loc?, pub-id[pub-id-type='doi, entity']?
-webpage|person-group[person-group-type='author']?, article-title?, uri?, year?, month?, day?, publisher-loc?, source?
+report|person-group[person-group-type='author']?, source?, year?, month?, day?, publisher-name*, publisher-loc*, pub-id[pub-id-type='isbn, entity']?
+software|person-group[person-group-type='author']?, year?, month?, day?, source?, version?, publisher-loc*, publisher-name*, pub-id[pub-id-type='doi, entity']?
+thesis|person-group[person-group-type='author']?, year?, month?, day?, article-title?, publisher-name*, publisher-loc*, pub-id[pub-id-type='doi, entity']?
+webpage|person-group[person-group-type='author']?, article-title?, uri?, year?, month?, day?, publisher-loc*, source?
 
 Example:
 
