@@ -197,6 +197,12 @@ In order to allow passing around data between different languages, Dar defines a
 { "type": "number", "data": 50.3 }
 ```
 
+### Boolean
+
+```json
+{ "type": "boolean", "data": true }
+```
+
 ### Array
 
 ```json
@@ -213,4 +219,10 @@ In order to allow passing around data between different languages, Dar defines a
     "actual_sales": [200,340,5],
   }
 }
+```
+
+### Object
+
+```json
+{ "type": "object", "data": {"custom": "data"} }
 ```
