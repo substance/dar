@@ -11,7 +11,7 @@ Dar stands for (Reproducible) Document Archive and specifies a virtual file form
   <assets>
     <asset id="234o23489237498234798" mime-type="image/png" name="Picture 1" path="234o23489237498234798.png"/>
   </assets>
-  <runtime>particle-physics@1.0</runtime>
+  <runtime>sci@0.2.0</runtime>
 </dar>
 ```
 
@@ -40,6 +40,7 @@ The following specifications define a markup language (XML) for research article
 
 - [Dar Article](DarArticle.md): An XML format, based on JATS, the de facto standard for archiving and interchange of scientific open-access contents with XML
 - [Dar Sheet](DarSheet.md): A simple XML format to describe sheets (think MS Excel or Google sheets) but designed for reproducible scientific computations
+- [Dar Runtime](DarRuntime.md): An API for looking up and accessing runtimes, which support multiple languages using HTTP.
 
 ## Editors
 
