@@ -13,7 +13,7 @@ E.g. a user could choose a `sci` runtime, which provides a number of languages (
 </dar>
 ```
 
-*NOTE: This draft spec is a work in progress, and considered a request for comments.*
+*NOTE: This draft spec is a work in progress, and considered a request for comments. For a reference implementation of this spec see [Stencila](https://github.com/stencila/stencila)*.
 
 ## Runtime Registry
 
