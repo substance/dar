@@ -48,7 +48,7 @@ The following specifications define a markup language (XML) for research article
 The following editors are developed to edit document archives of research projects:
 
 - [Stencila](https://github.com/stencila/stencila): an office suite for reproducible research
-- [Texture](https://github.com/substance/texture): an open source manuscript editor designed for publishers
+- [Texture](https://github.com/substance/texture): an open source manuscript editor designed for publishers and authors
 
 ## Examples
 
