@@ -8,7 +8,7 @@ Core elements
 
 Reproducible elements
 
-[`<code[specific-use=cell]>`](#codespecific-usecell) [`<fig[fig-type=repro-fig]>`](#figfig-typerepro-fig) [`<named-content[content-type=inline-cell]>`](#named-content-content-typeinline-cell)
+[`<code[specific-use=cell]>`](#codespecific-usecell) [`<fig[fig-type=repro-fig]>`](#figfig-typerepro-fig) [`<named-content[content-type=inline-cell]>`](#named-contentcontent-typeinline-cell)
 
 
 ## Core Elements
