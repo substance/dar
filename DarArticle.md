@@ -373,7 +373,7 @@ Example:
 <code specific-use="cell">
   <named-content>
     <alternatives>
-      <code specific-use="source" language="javascript"><![CDATA[x = 5*5]]></code>
+      <code specific-use="source" language="javascript" code-type="paused"><![CDATA[x = 5*5]]></code>
       <code specific-use="output" language="json"><![CDATA[{ "value_type": "number", "value": 25}]]></code>
     </alternatives>
   </named-content>
@@ -387,7 +387,7 @@ Example:
 
 ```xml
 
-<p>We got <named-content>
+<p>We got <named-content content-type="inline-cell">
     <alternatives>
       <code specific-use="source" language="javascript"><![CDATA[5*5]]></code>
       <code specific-use="output" language="json"><![CDATA[{ "value_type": "number", "value": 25}]]></code>
@@ -430,7 +430,7 @@ Example:
     <p>Lorem ipsum</p>
   </caption>
   <alternatives>
-    <code specific-use="source" language="mini"><![CDATA[plot([11,98])]]></code>
+    <code specific-use="source" language="mini" code-type="paused"><![CDATA[plot([11,98])]]></code>
     <code specific-use="output" language="json"><![CDATA[{"execution_time": 1, "value_type": "plot-ly", "value": {...} }]]></code>
   </alternatives>
 </fig>
@@ -445,6 +445,7 @@ code[specific-use=source], code[specific-use=output]
 ### `fig[fig-type=repro-fig] > alternatives > code`
 
 ```
+@code-type paused|''
 #PCDATA
 ```
 
