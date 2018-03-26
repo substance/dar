@@ -8,7 +8,7 @@ Core elements
 
 Reproducible elements
 
-[`<code[specific-use=cell]>`](#codespecific-usecell) [`<fig[fig-type=repro-fig]>`](#figfig-typerepro-fig)
+[`<code[specific-use=cell]>`](#codespecific-usecell) [`<fig[fig-type=repro-fig]>`](#figfig-typerepro-fig) [`<named-content[content-type=inline-cell]>`](#named-content-content-typeinline-cell)
 
 
 ## Core Elements
@@ -380,6 +380,23 @@ Example:
 </code>
 ```
 
+### `named-content[content-type=inline-cell]`
+
+Example:
+
+
+```xml
+
+<p>We got <named-content>
+    <alternatives>
+      <code specific-use="source" language="javascript"><![CDATA[x = 5*5]]></code>
+      <code specific-use="output" language="json"><![CDATA[{ "value_type": "number", "value": 25}]]></code>
+    </alternatives>
+  </named-content> apples.
+</p>
+```
+
+
 ### `code[specific-use=cell] > named-content`:
 
 ```
@@ -430,3 +447,4 @@ code[specific-use=source], code[specific-use=output]
 ```
 #PCDATA
 ```
+
