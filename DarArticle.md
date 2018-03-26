@@ -389,7 +389,7 @@ Example:
 
 <p>We got <named-content>
     <alternatives>
-      <code specific-use="source" language="javascript"><![CDATA[x = 5*5]]></code>
+      <code specific-use="source" language="javascript"><![CDATA[5*5]]></code>
       <code specific-use="output" language="json"><![CDATA[{ "value_type": "number", "value": 25}]]></code>
     </alternatives>
   </named-content> apples.
