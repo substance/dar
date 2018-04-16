@@ -232,7 +232,9 @@ tex-math
 Example:
 
 ```xml
-<p>Math as part of the text <inline-formula content-type="math/tex"><tex-math>f\in {\mathcal C}^0([0,+\infty )).</tex-math></inline-formula>.</p>
+<p>Math as part of the text <inline-formula content-type="math/tex">
+  <tex-math>f\in {\mathcal C}^0([0,+\infty )).</tex-math>
+</inline-formula>.</p>
 ```
 
 ### `<list>`
