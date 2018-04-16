@@ -4,7 +4,7 @@ This specification defines strict tagging rules for [JATS](https://jats.nlm.nih.
 
 Core elements
 
-[`<aff>`](#aff) [`<article-meta>`](#article-meta) [`<caption>`](#caption) [`<contrib-group>`](#contrib-group) [`<contrib>`](#contrib-contrib-typeperson) [`<disp-quote>`](#disp-quote) [`<fig>`](#fig) [`<fn-group>`](#fn-group) [`<fn>`](#fn) [`<inline-math>`](#inline-math) [`<list>`](#list) [`<media>`](#media) [`<name>`](#name) [`<ref>`](#ref) [`sec`](#sec) [`table-wrap`](#table-wrap)
+[`<aff>`](#aff) [`<article-meta>`](#article-meta) [`<caption>`](#caption) [`<contrib-group>`](#contrib-group) [`<contrib>`](#contrib-contrib-typeperson) [`<disp-quote>`](#disp-quote) [`<fig>`](#fig) [`<fn-group>`](#fn-group) [`<fn>`](#fn) [`<inline-formula>`](#inline-formula) [`<list>`](#list) [`<media>`](#media) [`<name>`](#name) [`<ref>`](#ref) [`sec`](#sec) [`table-wrap`](#table-wrap)
 
 Reproducible elements
 
@@ -223,7 +223,7 @@ p*
 ```
 
 
-### `<inline-math>`
+### `<inline-formula>`
 
 ```
 tex-math
