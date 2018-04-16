@@ -4,7 +4,7 @@ This specification defines strict tagging rules for [JATS](https://jats.nlm.nih.
 
 Core elements
 
-[`<aff>`](#aff) [`<article-meta>`](#article-meta) [`<caption>`](#caption) [`<contrib-group>`](#contrib-group) [`<contrib>`](#contrib-contrib-typeperson) [`<disp-quote>`](#disp-quote) [`<fig>`](#fig) [`<fn-group>`](#fn-group) [`<fn>`](#fn) [`<list>`](#list) [`<media>`](#media) [`<name>`](#name) [`<ref>`](#ref) [`sec`](#sec) [`table-wrap`](#table-wrap)
+[`<aff>`](#aff) [`<article-meta>`](#article-meta) [`<caption>`](#caption) [`<contrib-group>`](#contrib-group) [`<contrib>`](#contrib-contrib-typeperson) [`<disp-quote>`](#disp-quote) [`<fig>`](#fig) [`<fn-group>`](#fn-group) [`<fn>`](#fn) [`<inline-math>`](#inline-math) [`<list>`](#list) [`<media>`](#media) [`<name>`](#name) [`<ref>`](#ref) [`sec`](#sec) [`table-wrap`](#table-wrap)
 
 Reproducible elements
 
@@ -220,6 +220,19 @@ Example:
 @id
 
 p*
+```
+
+
+### `<inline-math>`
+
+```
+tex-math
+```
+
+Example:
+
+```xml
+<p>Math as part of the text <inline-formula content-type="math/tex"><tex-math>f\in {\mathcal C}^0([0,+\infty )).</tex-math></inline-formula>.</p>
 ```
 
 ### `<list>`
