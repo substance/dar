@@ -312,17 +312,17 @@ Spec for `<element-citation>`:
 publication-type|pattern
 ---|---
 book|person-group[person-group-type=author]?, person-group[person-group-type=editor]?, edition?, year?, month?, day?, source?, publisher-loc*, publisher-name*, page-count?, pub-id[pub-id-type='doi, pmid, isbn']?
-chapter|person-group[person-group-type=author]?, person-group[person-group-type=editor]?, edition?, year?, month?, day?, chapter-title?, source?, publisher-loc*, publisher-name*, fpage?, lpage?, page-range?, elocation-id?, pub-id[pub-id-type='doi, pmid, isbn, entity']?
+chapter|person-group[person-group-type=author]?, person-group[person-group-type=editor]?, edition?, year?, month?, day?, chapter-title?, source?, publisher-loc*, publisher-name*, fpage?, lpage?, page-range?, elocation-id?, pub-id[pub-id-type='doi, pmid, isbn']?
 preprint|person-group[person-group-type='author'], article-title, source, year, month?, day?, pub-id[pub-id-type='doi']?
-clinicaltrial|person-group[person-group-type=sponsor]?, year?, month?, day?, article-title?, source?,pub-id[pub-id-type='doi, entity']?
-confproc|person-group[person-group-type='author']?, article-title?, year?, month?, day?, conf-name?, source?, fpage?, lpage?, page-range?, elocation-id?, pub-id[pub-id-type='doi,entity']?
-data|person-group[person-group-type='author']?, data-title?, source?, year?, month?, day?, pub-id[pub-id-type="accession, ark, doi, archive, entity"]?
-periodical|person-group[person-group-type=author]?, article-title?, year?, month?, day?, source?, fpage?, lpage?, page-range?, volume?, pub-id[pub-id-type='doi, entity']?
-journal|person-group[person-group-type=author]?, person-group[person-group-type=editor]?, year, month?, day?, article-title, source?, volume?, issue?, fpage?, lpage?, page-range?, elocation-id?, comment?, pub-id[pub-id-type='doi, pmid, entity']?
+clinicaltrial|person-group[person-group-type=sponsor]?, year?, month?, day?, article-title?, source?,pub-id[pub-id-type='doi']?
+confproc|person-group[person-group-type='author']?, article-title?, year?, month?, day?, conf-name?, source?, fpage?, lpage?, page-range?, elocation-id?, pub-id[pub-id-type='do']?
+data|person-group[person-group-type='author']?, data-title?, source?, year?, month?, day?, pub-id[pub-id-type="accession, ark, doi, archive"]?
+periodical|person-group[person-group-type=author]?, article-title?, year?, month?, day?, source?, fpage?, lpage?, page-range?, volume?, pub-id[pub-id-type='doi']?
+journal|person-group[person-group-type=author]?, person-group[person-group-type=editor]?, year, month?, day?, article-title, source?, volume?, issue?, fpage?, lpage?, page-range?, elocation-id?, comment?, pub-id[pub-id-type='doi, pmid']?
 patent|person-group[person-group-type='inventor'], collab[type=assignee]?, article-title?, year?, month?, day?, source?, patent[country='xxx']?
-report|person-group[person-group-type='author']?, source?, year?, month?, day?, publisher-name*, publisher-loc*, pub-id[pub-id-type='isbn, entity']?
-software|person-group[person-group-type='author']?, year?, month?, day?, source?, version?, publisher-loc*, publisher-name*, pub-id[pub-id-type='doi, entity']?
-thesis|person-group[person-group-type='author']?, year?, month?, day?, article-title?, publisher-name*, publisher-loc*, pub-id[pub-id-type='doi, entity']?
+report|person-group[person-group-type='author']?, source?, year?, month?, day?, publisher-name*, publisher-loc*, pub-id[pub-id-type='isbn']?
+software|person-group[person-group-type='author']?, year?, month?, day?, source?, version?, publisher-loc*, publisher-name*, pub-id[pub-id-type='doi']?
+thesis|person-group[person-group-type='author']?, year?, month?, day?, article-title?, publisher-name*, publisher-loc*, pub-id[pub-id-type='doi']?
 webpage|person-group[person-group-type='author']?, article-title?, uri?, year?, month?, day?, publisher-loc*, source?
 
 Example:
@@ -338,8 +338,6 @@ Example:
     <publisher-loc>Washington, D.C</publisher-loc>
     <publisher-name>National Academies Press</publisher-name>
     <pub-id pub-id-type="doi">10.17226/10732</pub-id>
-    <!-- Internal: links an element-citation with a record in the database -->
-    <pub-id pub-id-type="entity">book-1</pub-id>
   </element-citation>
 </ref>
 ```
