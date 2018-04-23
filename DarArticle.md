@@ -1,6 +1,6 @@
 # Dar Article
 
-This specification defines strict tagging rules for [JATS](https://jats.nlm.nih.gov/archiving/tag-library/1.1/), with the goal of optimising for machine readability, avoiding redundancy and ensuring reusability. The premise is to have exactly one tagging style per use-case. E.g. there is only one way to tag a reference, author or affiliation. Additionally we define a set of optional extensions to model reproducible elements (cells) in JATS. This work is inspired but not related to [JATS4R](http://jats4r.org/), a similar effort to make JATS more reusable. 
+This specification defines strict tagging rules for [JATS](https://jats.nlm.nih.gov/archiving/tag-library/1.1/), with the goal of optimising for machine readability, avoiding redundancy and ensuring reusability. The premise is to have exactly one tagging style per use-case. E.g. there is only one way to tag a reference, author or affiliation. Additionally we define a set of optional extensions to model reproducible elements (cells) in JATS. This work is inspired but not related to [JATS4R](http://jats4r.org/), a similar effort to make JATS more reusable.
 
 Core elements
 
@@ -311,8 +311,9 @@ Spec for `<element-citation>`:
 
 publication-type|pattern
 ---|---
-book|person-group[person-group-type=author]?, person-group[person-group-type=editor]?, edition?, year?, month?, day?, chapter-title?, source?, publisher-loc*, publisher-name*, fpage?, lpage?, page-range?, page-count?, elocation-id?, pub-id[pub-id-type='doi, pmid, isbn, entity']?
-preprint|person-group[person-group-type='author'], article-title, source, year, month?, day?, pub-id[pub-id-type='doi, entity']?
+book|person-group[person-group-type=author]?, person-group[person-group-type=editor]?, edition?, year?, month?, day?, source?, publisher-loc*, publisher-name*, page-count?, pub-id[pub-id-type='doi, pmid, isbn']?
+chapter|person-group[person-group-type=author]?, person-group[person-group-type=editor]?, edition?, year?, month?, day?, chapter-title?, source?, publisher-loc*, publisher-name*, fpage?, lpage?, page-range?, elocation-id?, pub-id[pub-id-type='doi, pmid, isbn, entity']?
+preprint|person-group[person-group-type='author'], article-title, source, year, month?, day?, pub-id[pub-id-type='doi']?
 clinicaltrial|person-group[person-group-type=sponsor]?, year?, month?, day?, article-title?, source?,pub-id[pub-id-type='doi, entity']?
 confproc|person-group[person-group-type='author']?, article-title?, year?, month?, day?, conf-name?, source?, fpage?, lpage?, page-range?, elocation-id?, pub-id[pub-id-type='doi,entity']?
 data|person-group[person-group-type='author']?, data-title?, source?, year?, month?, day?, pub-id[pub-id-type="accession, ark, doi, archive, entity"]?
@@ -463,4 +464,3 @@ code[specific-use=source], code[specific-use=output]
 @code-type paused|''
 #PCDATA
 ```
-
