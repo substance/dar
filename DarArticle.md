@@ -313,7 +313,7 @@ publication-type|pattern
 ---|---
 book|person-group[person-group-type=author]?, person-group[person-group-type=editor]?, edition?, year?, month?, day?, source?, publisher-loc*, publisher-name*, page-count?, pub-id[pub-id-type='doi, pmid, isbn']?
 chapter|person-group[person-group-type=author]?, person-group[person-group-type=editor]?, edition?, year?, month?, day?, chapter-title?, source?, publisher-loc*, publisher-name*, fpage?, lpage?, page-range?, elocation-id?, pub-id[pub-id-type='doi, pmid, isbn']?
-confproc|person-group[person-group-type='author']?, article-title?, year?, month?, day?, conf-name?, source?, fpage?, lpage?, page-range?, elocation-id?, pub-id[pub-id-type='do']?
+confproc|person-group[person-group-type='author']?, article-title?, year?, month?, day?, conf-name?, source?, fpage?, lpage?, page-range?, elocation-id?, conf-name?, conf-loc?, pub-id[pub-id-type='doi']?
 data|person-group[person-group-type='author']?, data-title?, source?, year?, month?, day?, pub-id[pub-id-type="accession, ark, doi, archive"]?
 magazine|person-group[person-group-type=author]?, article-title?, year?, month?, day?, source?, fpage?, lpage?, page-range?, volume?, pub-id[pub-id-type='doi']?
 newspaper|person-group[person-group-type=author]?, article-title?, year?, month?, day?, source?, fpage?, lpage?, page-range?, volume?, pub-id[pub-id-type='doi']?, edition?,
