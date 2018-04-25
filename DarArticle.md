@@ -316,13 +316,19 @@ chapter|person-group[person-group-type=author]?, person-group[person-group-type=
 confproc|person-group[person-group-type='author']?, article-title?, year?, month?, day?, conf-name?, source?, fpage?, lpage?, page-range?, elocation-id?, conf-name?, conf-loc?, pub-id[pub-id-type='doi']?
 data|person-group[person-group-type='author']?, data-title?, source?, year?, month?, day?, pub-id[pub-id-type="accession, ark, doi, archive"]?
 magazine|person-group[person-group-type=author]?, article-title?, year?, month?, day?, source?, fpage?, lpage?, page-range?, volume?, pub-id[pub-id-type='doi']?
-newspaper|person-group[person-group-type=author]?, article-title?, year?, month?, day?, source?, fpage?, lpage?, page-range?, volume?, pub-id[pub-id-type='doi']?, edition?,
+newspaper|person-group[person-group-type=author]?, article-title?, year?, month?, day?, source?, fpage?, lpage?, page-range?, volume?, pub-id[pub-id-type='doi']?, edition?, part-title?
 journal|person-group[person-group-type=author]?, person-group[person-group-type=editor]?, year, month?, day?, article-title, source?, volume?, issue?, fpage?, lpage?, page-range?, elocation-id?, comment?, pub-id[pub-id-type='doi, pmid']?
 patent|person-group[person-group-type='inventor'], collab[type=assignee]?, article-title?, year?, month?, day?, source?, patent[country='xxx']?
-report|person-group[person-group-type='author']?, person-group[person-group-type=sponsor]?, source?, year?, month?, day?, publisher-name*, publisher-loc*, pub-id[pub-id-type='isbn, doi']?
+report|person-group[person-group-type='author']?, person-group[person-group-type=sponsor]?, source?, year?, month?, day?, publisher-name*, publisher-loc*, pub-id[pub-id-type='isbn, doi']?, series?
 software|person-group[person-group-type='author']?, year?, month?, day?, source?, version?, publisher-loc*, publisher-name*, pub-id[pub-id-type='doi']?
 thesis|person-group[person-group-type='author']?, year?, month?, day?, article-title?, publisher-name*, publisher-loc*, pub-id[pub-id-type='doi']?
 webpage|person-group[person-group-type='author']?, article-title?, uri?, year?, month?, day?, publisher-loc*, source?
+
+Notes:
+
+- `part-title` used to describe a section in a newspaper article
+- `series` describes things like "Technical Report Series; 949" in reports (note, that there is currently no extra field for the series number)
+
 
 Example:
 
@@ -340,6 +346,7 @@ Example:
   </element-citation>
 </ref>
 ```
+
 
 ### `<sec>`
 
