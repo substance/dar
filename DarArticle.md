@@ -323,7 +323,7 @@ preprint|person-group[person-group-type=author]?, person-group[person-group-type
 report|person-group[person-group-type='author']?, person-group[person-group-type=sponsor]?, source?, year?, month?, day?, publisher-name*, publisher-loc*, pub-id[pub-id-type='isbn, doi']?, series?
 software|person-group[person-group-type='author']?, year?, month?, day?, source?, version?, publisher-loc*, publisher-name*, pub-id[pub-id-type='doi']?
 thesis|person-group[person-group-type='author']?, year?, month?, day?, article-title?, publisher-name*, publisher-loc*, pub-id[pub-id-type='doi']?
-webpage|person-group[person-group-type='author']?, article-title?, uri?, year?, month?, day?, publisher-loc*, source?
+webpage|person-group[person-group-type='author']?, article-title?, uri?, year?, month?, day?, date-in-citation[iso-8601-date=yyyy-mm-dd], publisher-loc*, source?
 
 Notes:
 
