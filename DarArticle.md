@@ -162,7 +162,7 @@ Example for editors:
 ### `<contrib contrib-type="person">`
 
 ```
-contrib-id[contrib-id-type=orcid]?, contrib-id[contrib-id-type=entity]?, name, string-name[contrib-type=alias], bio?, email?, xref*
+contrib-id[contrib-id-type=orcid]?, contrib-id[contrib-id-type=entity]?, name, string-name[content-type=alias], bio?, email?, xref*
 ```
 
 ### `<contrib contrib-type="group">`
