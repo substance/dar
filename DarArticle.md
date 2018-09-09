@@ -4,7 +4,7 @@ This specification defines strict tagging rules for [JATS](https://jats.nlm.nih.
 
 Core elements
 
-[`<aff>`](#aff) [`<article-meta>`](#article-meta) [`<caption>`](#caption) [`<contrib-group>`](#contrib-group) [`<contrib>`](#contrib-contrib-typeperson) [`<disp-quote>`](#disp-quote) [`<fig>`](#fig) [`<fn-group>`](#fn-group) [`<fn>`](#fn) [`<inline-formula>`](#inline-formula) [`<list>`](#list) [`<media>`](#media) [`<name>`](#name) [`<ref>`](#ref) [`sec`](#sec) [`table-wrap`](#table-wrap)
+[`<aff>`](#aff) [`<article-meta>`](#article-meta) [`<bio>`](#bio) [`<caption>`](#caption) [`<contrib-group>`](#contrib-group) [`<contrib>`](#contrib-contrib-typeperson) [`<disp-quote>`](#disp-quote) [`<fig>`](#fig) [`<fn-group>`](#fn-group) [`<fn>`](#fn) [`<inline-formula>`](#inline-formula) [`<list>`](#list) [`<media>`](#media) [`<name>`](#name) [`<ref>`](#ref) [`sec`](#sec) [`table-wrap`](#table-wrap)
 
 Reproducible elements
 
@@ -86,6 +86,12 @@ Example shows all editable elements:
 ```
 
 
+### `<bio>`
+
+```
+p*
+```
+
 ### `<caption>`
 
 ```
@@ -156,7 +162,7 @@ Example for editors:
 ### `<contrib contrib-type="person">`
 
 ```
-contrib-id[contrib-id-type=orcid]?, contrib-id[contrib-id-type=entity]?, name, string-name[contrib-type=alias], email?, xref*
+contrib-id[contrib-id-type=orcid]?, contrib-id[contrib-id-type=entity]?, name, string-name[contrib-type=alias], bio?, email?, xref*
 ```
 
 ### `<contrib contrib-type="group">`
