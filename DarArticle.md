@@ -45,7 +45,7 @@ article-id?, article-categories?, title-group?, contrib-group[content-type=autho
 contrib-group[content-type=editor], author-notes?, pub-date*, volume?, issue?,
 isbn, (((fpage, lpage?)?, page-range?) | elocation-id)?, history?, permissions?,
 self-uri*, (related-article | related-object)*, abstract?, trans-abstract*,
-kwd-group*, funding-group*, conference*, counts?, custom-meta-group?
+kwd-group*, funding-group*, counts?, custom-meta-group?
 ```
 
 Example shows all editable elements:
