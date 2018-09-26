@@ -306,7 +306,7 @@ surname?, given-names?, prefix?, suffix?
 ### `<person-group>`
 
 ```
-(collab, name)*
+(collab | name)*
 ```
 
 ### `<ref>`
