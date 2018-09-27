@@ -38,7 +38,7 @@ Dar is being designed for storing [reproducible research publications](https://e
 
 The following specifications define a markup language (XML) for research articles and spreadsheets:
 
-- [TextureArticle](https://github.com/substance/texture/blob/master/docs/TextureArticle.md): An XML format, based on JATS, the de facto standard for archiving and interchange of scientific open-access contents with XML
+- [Texture Article](https://github.com/substance/texture/blob/master/docs/TextureArticle.md): An XML format, based on JATS, the de facto standard for archiving and interchange of scientific open-access contents with XML
 
 ## Editors
 
