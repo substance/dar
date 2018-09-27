@@ -1,5 +1,7 @@
 # Dar Article
 
+**NOTE: This document is incomplete and slightly out of date. See latest complete schema [here](https://github.com/substance/texture/blob/master/docs/TextureArticle.md).**
+
 This specification defines strict tagging rules for [JATS](https://jats.nlm.nih.gov/archiving/tag-library/1.1/), with the goal of optimising for machine readability, avoiding redundancy and ensuring reusability. The premise is to have exactly one tagging style per use-case. E.g. there is only one way to tag a reference, author or affiliation. Additionally we define a set of optional extensions to model reproducible elements (cells) in JATS. This work is inspired but not related to [JATS4R](http://jats4r.org/), a similar effort to make JATS more reusable.
 
 Core elements
