@@ -3,7 +3,7 @@
 Dar stands for (Reproducible) Document Archive and specifies a virtual file format that holds multiple digital documents, complete with images and other assets. A Dar consists of a manifest file (`manifest.xml`) that describes the contents.
 
 ```xml
-<!DOCTYPE sheet PUBLIC "DarManifest 0.1.0" "http://darformat.org/DarManifest-0.1.0.dtd">
+<!DOCTYPE manifest PUBLIC "DarManifest 0.1.0" "http://darformat.org/DarManifest-0.1.0.dtd">
 <dar>
   <documents>
     <document id="manuscript" name="Reproducible Document Stack" type="article" path="manuscript.xml" />
@@ -12,7 +12,6 @@ Dar stands for (Reproducible) Document Archive and specifies a virtual file form
   <assets>
     <asset id="234o23489237498234798" mime-type="image/png" name="Picture 1" path="234o23489237498234798.png"/>
   </assets>
-  <runtime>sci@0.2.0</runtime>
 </dar>
 ```
 
@@ -39,9 +38,7 @@ Dar is being designed for storing [reproducible research publications](https://e
 
 The following specifications define a markup language (XML) for research articles and spreadsheets:
 
-- [Dar Article](DarArticle.md): An XML format, based on JATS, the de facto standard for archiving and interchange of scientific open-access contents with XML
-- [Dar Sheet](DarSheet.md): A simple XML format to describe sheets (think MS Excel or Google sheets) but designed for reproducible scientific computations
-- [Dar Runtime](DarRuntime.md): An HTTP API for looking up and accessing runtimes, which support multiple languages.
+- [TextureArticle](https://github.com/substance/texture/blob/master/docs/TextureArticle.md): An XML format, based on JATS, the de facto standard for archiving and interchange of scientific open-access contents with XML
 
 ## Editors
 
@@ -54,8 +51,8 @@ The following editors are developed to edit document archives of research projec
 
 These two examples are continuously updated, to reflect the latest versions of the related specifications.
 
-- [Classic Research Manuscript](examples/classic-manuscript): Editable in Texture
-- [Reproducible Research Publication](examples/reproducible-publication): Editable and runnable with Stencila
+- [Classic Research Manuscript](https://github.com/substance/texture/tree/master/data/kitchen-sink): Editable in Texture
+- [Reproducible Research Publication](https://github.com/stencila/stencila/tree/develop/examples/kitchen-sink): Editable and runnable with Stencila
 
 ## Status
 
