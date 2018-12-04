@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.1">
+    <xs:element name="dar">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="documents"/>
+                <xs:element ref="assets"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="documents">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="document"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="document">
+        <xs:complexType>
+            <xs:attribute name="id" use="required" type="xs:NCName"/>
+            <xs:attribute name="path" use="required" type="xs:NCName"/>
+            <xs:attribute name="type" use="required" type="xs:NCName"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="assets">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" ref="asset"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="asset">
+        <xs:complexType>
+            <xs:attribute name="id" use="required" type="xs:NCName"/>
+            <xs:attribute name="path" use="required" type="xs:NCName"/>
+            <xs:attribute name="type" use="required"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
